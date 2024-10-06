@@ -1,4 +1,4 @@
-.container {
+.links {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -10,3 +10,32 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.mobileLinks,
+.menuButton {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  .menuButton {
+    display: block;
+    cursor: pointer;
+  }
+
+  .mobileLinks {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 50%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+  }
+}
+
